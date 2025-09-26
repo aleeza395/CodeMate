@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #eef2fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.answerBox {
+  margin-bottom: 2rem;
+}
+
+.answerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectCard {
+  background-color: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.projectCard ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard :global(p) {
+  margin: 0.5rem 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.projectCard :global(strong) {
+  color: #111827;
+}
+
+.input {
+  width: 70%;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #366bc7;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.1);
+}
+
+.queryLabel {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.loading {
+  text-align: center;
+  color: #366bc7;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.error {
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+
+  .projectCard {
+    padding: 1rem 1.2rem;
+  }
+}

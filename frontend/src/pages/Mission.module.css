@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #366bc7;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #444;
+}
+
+.dropdown {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.progressSection {
+  text-align: center;
+}
+
+.progressLabel {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.streak {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.progressBar {
+  width: 100%;
+  height: 20px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #2a9d8f;
+  transition: width 0.4s ease;
+}
+
+.progressButton {
+  background-color: #366bc7;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.progressButton:hover {
+  background-color: #366bc7;
+}
+
+.badgeSection {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #e9f7ef;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #c7f0d8;
+}
+
+.badgeSection h2 {
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.badgeSection p {
+  color: #444;
+}
+
+.badge {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.status {
+  color: green;
+  text-align: center;
+  margin-bottom: 1rem;
+}

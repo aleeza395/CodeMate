@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#signup_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6682baae, #a9d7ff);
+  font-family: 'Arial', sans-serif;
+}
+
+.form_container {
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+.form_content {
+  flex: 1;
+  padding: 40px;
+}
+
+.form_content h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.form_content p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form_content p a {
+  color: #366bc7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #444;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #366bc7;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #366bc7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #264c8e;
+}
+
+.image {
+  flex: 1;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}

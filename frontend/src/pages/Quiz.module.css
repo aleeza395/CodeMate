@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quizContainer {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f0f9ff, #ffffff);
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1e293b;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.15rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  background-color: #e0f2fe;
+  border-color: #366bc7;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .quizContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem 1.2rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .cardsGrid {
+    gap: 1rem;
+  }
+}

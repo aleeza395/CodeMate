@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.heading {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #34495e;
+}
+
+.answerBox {
+  background-color: #eef2fa;
+  border: 1px solid #dfe6e9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.answerBox ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.loadingBox {
+  font-size: 1.1rem;
+  color: #366bc7;
+  text-align: center;
+  margin: 1rem 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.editorSection {
+  margin-bottom: 1.5rem;
+  border: 1px solid #eef2fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.button,
+.buttonAlt {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.button {
+  background-color: #366bc7;
+  color: white;
+}
+
+.button:hover {
+  background-color: #3d7be7;
+  transform: translateY(-2px);
+}
+
+.buttonAlt {
+  background-color: #eef2fa;
+  color: #366bc7;
+  border: 2px solid #366bc7;
+}
+
+.buttonAlt:hover {
+  transform: translateY(-2px);
+}
+
+.outputSection,
+.resultSection {
+  background-color: #f4f6f7;
+  border: 1px solid #dcdde1;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.outputSection h2,
+.resultSection h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.outputSection pre {
+  background-color: #ecf0f1;
+  padding: 0.75rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+.resultSection p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
