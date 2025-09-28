@@ -8,7 +8,6 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem("user");
     navigate("/homepage");
-    window.location.reload(); 
   };
 
   return (
