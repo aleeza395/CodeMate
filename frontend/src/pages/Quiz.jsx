@@ -27,7 +27,6 @@ const Quiz = () => {
 
   return (
    <>
-    <Header />
     <div className={quizStyles.quizContainer}>
       <h1 className={quizStyles.title}>Choose Your Quiz Topic</h1>
       <div className={quizStyles.cardsGrid}>

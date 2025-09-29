@@ -26,7 +26,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post("http://localhost:5000/login", {
+            const res = await axios.post("https://code-mate-five.vercel.app/login", {
                 username : username,
             email : email,
             password : password
@@ -36,7 +36,8 @@ const Login = () => {
         login(res.data.user)
             localStorage.setItem("token", res.data.token)
             console.log("assinged")
-            navigate('/dashboard')
+            alert("Logged in successfully")
+            window.location.href = "/dashboard";
         } catch (err) {
             console.log("error : ", err)
         }
@@ -50,7 +51,7 @@ const Login = () => {
         <p>Login your account and get started</p>
         <p>New user? <Link to='/signup'>Go to Signup</Link></p>
         <form onSubmit={handleSubmit}>
-            <label for='username'>Email<br></br>
+            <label for='username'>Username<br></br>
                 <input type='username' name='username' placeholder='Enter username here' value={username} onChange={handleUsername} />
             </label>
             <label for='email'>Email<br></br>

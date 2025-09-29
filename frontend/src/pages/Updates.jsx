@@ -9,7 +9,7 @@ const Updates = () => {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/updates')
+        const { data } = await axios.get('https://code-mate-five.vercel.app/updates')
         setUpdates(data.articles || [])
       } catch (error) {
         console.error('Error fetching updates:', error)
@@ -20,7 +20,6 @@ const Updates = () => {
 
   return (
     <>
-    <Header />
     <div className={updateStyles.updatesContainer}>
       <h1 className={updateStyles.heading}>Latest Tech Updates</h1>
       <div className={updateStyles.updatesList}>

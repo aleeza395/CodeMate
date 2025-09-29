@@ -15,9 +15,9 @@ const Dashboard = () => {
       if (!user) return;
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/quizresults/${user._id}`
+          `https://code-mate-five.vercel.app/api/quizresults/${user._id}`
         );
-        console.log("Fetched results:", res.data); // Debugging
+        console.log("Fetched results:", res.data); 
         setResults(res.data);
         setQuizCount(res.data.length);
       } catch (err) {
@@ -29,7 +29,7 @@ const Dashboard = () => {
       if (!user) return;
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/missions/${user._id}`
+          `https://code-mate-five.vercel.app/api/missions/${user._id}`
         );
         setMission(res.data);
       } catch (err) {
@@ -60,7 +60,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <Header />
       <div className={styles.container}>
         <h1 className={styles.welcome}>
           Welcome back, <span>{user?.username}</span>
@@ -148,7 +147,7 @@ const Dashboard = () => {
           <h2>Next Steps</h2>
           <p>
             Keep practicing daily, track your mission, and challenge yourself
-            with harder quizzes. You're making progress 🚀
+            with harder quizzes. You're making progress 
           </p>
         </section>
       </div>

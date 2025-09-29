@@ -45,7 +45,6 @@ const Homepage = () => {
 
   return (
     <>
-      <Header />
       <section className={homepageStyle.main}>
         <h1>Get your skills enhanced with CodeMate</h1>
         <h3>With CodeMate you will be able to</h3>

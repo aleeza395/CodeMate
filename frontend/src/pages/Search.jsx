@@ -16,7 +16,7 @@ const Search = () => {
     const handleKeyDown = async (e) => {
         if (e.key === "Enter") {
           setGenerating("Generating...")
-            const res = await axios.post("http://localhost:5000/api/query", {query})
+            const res = await axios.post("https://code-mate-five.vercel.app/api/query", {query})
             setAnswer(res.data)
             setGenerating("")
         }
@@ -47,7 +47,6 @@ const Search = () => {
     
   return (
     <div>
-        <Header />
         <div id={searchStyling.search_page}>
             <h1>Dive into any topic, any language, any tool</h1>
             <div className={searchStyling.languages}>

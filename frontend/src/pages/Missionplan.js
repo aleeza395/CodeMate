@@ -12,7 +12,7 @@ const Missionplan = () => {
     const fetchMission = async () => {
       if (!user) return;
       try {
-        const res = await axios.get(`http://localhost:5000/api/missions/${user._id}`);
+        const res = await axios.get(`https://code-mate-five.vercel.app/api/missions/${user._id}`);
         if (res.data) {
           setDays(res.data.days);
           setCurrentStreak(res.data.currentStreak);
@@ -27,7 +27,7 @@ const Missionplan = () => {
   const saveMission = async (updatedDays, updatedStreak) => {
     if (!user) return;
     try {
-      await axios.post("http://localhost:5000/api/missions/save", {
+      await axios.post("https://code-mate-five.vercel.app/api/missions/save", {
         userId: user._id,
         days: updatedDays,
         currentStreak: updatedStreak,
@@ -58,7 +58,6 @@ const Missionplan = () => {
 
   return (
     <>
-    <Header />
     <div className={missionStyles.container}>
       <h1 className={missionStyles.heading}>Mission Plan</h1>
       <p className={missionStyles.intro}>

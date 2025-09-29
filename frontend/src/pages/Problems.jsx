@@ -22,7 +22,7 @@ const Problems = () => {
     const fetchData = async () => {
       setLoading(true); 
       try {
-        const res = await axios.post("http://localhost:5000/api/query", {
+        const res = await axios.post("https://code-mate-five.vercel.app/api/query", {
           query,
         });
         setAnswer(res.data);
@@ -41,7 +41,7 @@ const Problems = () => {
 
   const runCode = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/runcode", {
+      const response = await axios.post("https://code-mate-five.vercel.app/runcode", {
         language,
         code,
       });
@@ -53,7 +53,7 @@ const Problems = () => {
 
   const handleClick = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/checkcode", { code });
+      const res = await axios.post("https://code-mate-five.vercel.app/checkcode", { code });
       setCoderesult(res.data);
     } catch (err) {
       console.log("Error:", err);
@@ -62,7 +62,6 @@ const Problems = () => {
 
   return (
     <>
-    <Header />
     <div className={problemStyles.container}>
       <h1 className={problemStyles.heading}>Practice Problems in {language}</h1>
 

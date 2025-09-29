@@ -21,7 +21,7 @@ const Projecthelper = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/api/query", {
+      const res = await axios.post("https://code-mate-five.vercel.app/api/query", {
         query: inputQuery,
       });
       setAnswer(res.data);
@@ -45,14 +45,13 @@ const Projecthelper = () => {
 
   return (
     <>
-    <Header />
     <div className={projectStyle.container}>
       {answer && (
         <div className={projectStyle.answerBox}>
           <h2 className={projectStyle.title}> Project Helper</h2>
           <div className={projectStyle.answerContent}>
   {answer
-    .split(/\n(?=\d+\.\s)/) // split only at the start of a new numbered idea
+    .split(/\n(?=\d+\.\s)/) 
     .filter(block => block.trim() !== "")
     .map((idea, index) => (
       <div key={index} className={projectStyle.projectCard}>

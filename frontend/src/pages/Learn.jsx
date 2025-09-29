@@ -19,7 +19,7 @@ const Learn = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.post('http://localhost:5000/api/query', { query });
+        const res = await axios.post('https://code-mate-five.vercel.app/api/query', { query });
         setAnswer(res.data);
       } catch (err) {
         setError('Failed to fetch learning content. Please try again.');
@@ -38,7 +38,6 @@ const Learn = () => {
 
   return (
     <>
-    <Header />
     <div className={learnStyles.container}>
       <h1 className={learnStyles.title}>Learn: {language}</h1>
 

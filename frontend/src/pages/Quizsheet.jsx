@@ -21,7 +21,7 @@ const Quizsheet = () => {
             text: `Start asking multiple choice questions in ${language} from me one by one. After I have answered every question calculate the score and tell me`,
           },
         ];
-        const response = await axios.post("http://localhost:5000/quizroute", {
+        const response = await axios.post("https://code-mate-five.vercel.app/quizroute", {
           messages: initialQuery,
         });
 
@@ -44,7 +44,7 @@ const Quizsheet = () => {
       setUserinput("");
 
       try {
-        const response = await axios.post("http://localhost:5000/quizroute", {
+        const response = await axios.post("https://code-mate-five.vercel.app/quizroute", {
           messages: newQuery,
         });
 
@@ -70,7 +70,7 @@ const Quizsheet = () => {
     if (!user) return;
 
     try {
-      await axios.post("http://localhost:5000/api/quizresults/save", {
+      await axios.post("https://code-mate-five.vercel.app/api/quizresults/save", {
         userId: user._id,
         language,
         score,

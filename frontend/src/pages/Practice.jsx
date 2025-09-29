@@ -44,7 +44,6 @@ const languages = [
 const Practice = () => {
   return (
    <>
-    <Header />
     <div className={practiceStyles.practiceContainer}>
       <h1 className={practiceStyles.heading}>Choose Your Language</h1>
       <p className={practiceStyles.subheading}>
