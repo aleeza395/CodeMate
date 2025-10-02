@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import homepageStyle from "./Homepage.module.css";
@@ -43,6 +43,15 @@ const Homepage = () => {
     visibleLanguages.push(languages[(current + i) % languages.length]);
   }
 
+  const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/homepage");
+  };
+
+
   return (
     <>
       <section className={homepageStyle.main}>
@@ -52,7 +61,17 @@ const Homepage = () => {
         <p>Practice yourself with provided problems</p>
         <p>Track your progress and see improvement</p>
         <p>Build projects to use your problem solving skills</p>
-        <div>
+        {user ? (
+                <div>
+          <button>
+            <Link to="/dashboard">Dashboard</Link>
+          </button>
+          <button>
+            <Link to="/logout" onClick={handleLogout}>Logout</Link>
+          </button>
+        </div>
+              ) : (
+                <div>
           <button>
             <Link to="/signup">Signup</Link>
           </button>
@@ -60,6 +79,7 @@ const Homepage = () => {
             <Link to="/login">Login</Link>
           </button>
         </div>
+              )}
       </section>
 
       <section className={homepageStyle.skills}>
