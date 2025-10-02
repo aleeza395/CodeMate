@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={footerStyles.footer}>
       <div className={footerStyles.container}>
         <div className={footerStyles.section}>
-          <h3>CodeToLearn</h3>
+          <h3>CodeMate</h3>
           <p>Empowering your coding journey one step at a time.</p>
         </div>
 
@@ -23,7 +23,7 @@ const Footer = () => {
 
 
       <div className={footerStyles.bottom}>
-        <p>&copy; {new Date().getFullYear()} CodeToLearn. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} CodeMate. All rights reserved.</p>
       </div>
     </footer>
   );

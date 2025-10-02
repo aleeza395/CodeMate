@@ -41,6 +41,7 @@ const Signup = () => {
         })
         console.log("Response : ", res.data)
         alert("User registered successfully")
+        window.location.href = "/dashboard";
         } catch (err) {
             console.log("Error : ", err)
         }
